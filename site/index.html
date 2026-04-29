@@ -490,6 +490,66 @@
           Close with independence and practicality. The mission is not just software; it is leverage for local businesses.
         </aside>
       </section>
+
+      <section class="slide requirements-slide" data-title="Merchant Launch Packet">
+        <p class="eyebrow">Merchant onboarding</p>
+        <h2>What a new merchant must provide to launch Open Ops.</h2>
+
+        <div class="requirements-layout">
+          <article class="requirements-card">
+            <h3>Credentials & accounts</h3>
+            <ul>
+              <li>GitHub admin, Actions/Pages, deployment secrets; DNS/TLS, static hosting, server SSH, Caddy/Nginx.</li>
+              <li>Square production app: access token, location ID, catalog, orders, payments, inventory, KDS.</li>
+              <li>BTCPay Server: URL, store ID, API key, webhook secret, Lightning liquidity, Bitcoin Rewards plugin.</li>
+              <li>Breez/Spark API key and LNURL domain if enabled; Nostr keys/relays/NIP-05; OpenClaw bot identity.</li>
+              <li>Apple Developer + App Store Connect API key; Google Play account + signing/upload key; ops API tokens.</li>
+            </ul>
+          </article>
+
+          <article class="requirements-card">
+            <h3>Merchant assets</h3>
+            <ul>
+              <li>Legal/display/app names, tagline, support/privacy/terms URLs, app store descriptions and keywords.</li>
+              <li>Logo SVG/PNG, app icon source, PWA icons, Android adaptive icon, brand colors and fonts.</li>
+              <li>Storefront, product, team, station-standard, procedure, screenshot, and feature-graphic imagery.</li>
+              <li>Square menu/catalog: categories, items, modifiers, taxes, photos, pickup rules, KDS naming.</li>
+            </ul>
+          </article>
+
+          <article class="requirements-card">
+            <h3>Operating inputs</h3>
+            <ul>
+              <li>Staff roster, roles, manager list, approved pubkeys, and escalation rules.</li>
+              <li>Opening/closing/inventory checklists, procedures, recipes, training cards.</li>
+              <li>Inventory items, units, par levels, vendors, waste/discrepancy categories, forecast thresholds.</li>
+              <li>Rewards policy: sats %, caps, expiry, refund handling, education copy, liquidity budget.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="repo-matrix">
+          <strong>Repos to fork/configure</strong>
+          <span>Open_Ops</span>
+          <span>trailspwa</span>
+          <span>Trails-Coffee</span>
+          <span>Trails-Coffee-Android</span>
+          <span>Coffeeshop-checklist</span>
+          <span>trails-api</span>
+          <span>Squareorder</span>
+          <span>bitcoinrewards</span>
+          <span>trails_landing</span>
+          <span>Anmore / strfry optional</span>
+        </div>
+
+        <p class="footnote requirements-footnote">
+          Full implementation worksheet: <code>docs/merchant-onboarding-requirements.md</code>. Never commit live secrets; keep them in GitHub Secrets, server env vars, Apple/Google consoles, Square, BTCPay, or the merchant password manager.
+        </p>
+
+        <aside class="speaker-notes">
+          End with concrete execution. This page turns the pitch into a launch checklist: credentials, assets, operating inputs, and repos required for a merchant deployment.
+        </aside>
+      </section>
     </main>
 
     <footer class="bottombar">

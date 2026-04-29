@@ -15,6 +15,15 @@ Live deck target: `https://jpgaviria2.github.io/Open_Ops/`
 - Staff checklist site, procedures, inventory, waste, and discrepancy tracking
 - Square sales sync, owner briefings, forecasting, and financial/ops updates
 - Packaging, business model, target customers, roadmap, and ask
+- Final-page merchant launch packet: required credentials, assets, operating inputs, and repos
+
+## Merchant onboarding worksheet
+
+A detailed implementation checklist lives at:
+
+`docs/merchant-onboarding-requirements.md`
+
+It covers required accounts, credentials, domains, hosting, Square, BTCPay Server, Breez/Spark, Nostr, OpenClaw, iOS, Android, staff ops, inventory, app store assets, and the applicable GitHub repositories.
 
 ## Presenting
 

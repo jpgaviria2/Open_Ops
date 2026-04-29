@@ -15,3 +15,13 @@ Small merchants are forced to run their businesses across disconnected tools: PO
 Open Ops solves this by packaging the real Trails Coffee ecosystem as a modular merchant operating system. The customer layer includes native iOS and Android apps plus a progressive web app for ordering, wallet, rewards, chat, social updates, events, fundraisers, and Bitcoin education. The operations layer includes staff checklists, procedures, prep lists, inventory reports, discrepancy tracking, waste logs, Square sales sync, forecasting, and financial updates. The intelligence layer is OpenClaw chat, which can brief the owner, guide staff, and help customers using actual business context.
 
 The architecture is open-source-first: Bitcoin and BTCPay Server for sats rewards and Lightning invoices, Nostr for identity and messaging, PWA/native apps for access, Square integration for existing merchant workflows, and OpenClaw for AI automation. Trails Coffee is the live proof-of-concept. The next step is to make the system reusable, onboard pilot merchants, and turn a single cafe ecosystem into an open merchant platform.
+
+## Merchant onboarding / launch packet
+
+The final page of the deck now summarizes what a new merchant must provide before deployment:
+
+- Credentials and accounts: GitHub, DNS/hosting, Square, BTCPay Server, Breez/Spark, Nostr, OpenClaw, Apple Developer, Google Play, API tokens, optional Sheets/Maton/SMTP.
+- Merchant assets: app names, logos, icons, brand colors, photos, app store listings, menu/catalog, staff procedures, inventory, rewards policy.
+- Applicable repositories: Open_Ops, trailspwa, Trails-Coffee, Trails-Coffee-Android, Coffeeshop-checklist, trails-api, Squareorder, bitcoinrewards, trails_landing, optional Anmore/strfry.
+
+Full worksheet: `docs/merchant-onboarding-requirements.md`.

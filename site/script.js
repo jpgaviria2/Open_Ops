@@ -27,6 +27,7 @@ function render() {
 
   const title = slides[current].dataset.title || `Slide ${human}`;
   document.title = `${human}. ${title} — Open Ops`;
+  document.body.classList.toggle('requirements-active', slides[current].classList.contains('requirements-slide'));
 
   if (window.location.hash !== `#${human}`) {
     history.replaceState(null, '', `#${human}`);
