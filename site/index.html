@@ -492,18 +492,19 @@
       </section>
 
       <section class="slide requirements-slide" data-title="Merchant Launch Packet">
-        <p class="eyebrow">Merchant onboarding</p>
-        <h2>What a new merchant must provide to launch Open Ops.</h2>
+        <p class="eyebrow">Hosted merchant onboarding</p>
+        <h2>What a merchant provides — while Open Ops runs the stack.</h2>
 
         <div class="requirements-layout">
           <article class="requirements-card">
             <h3>Credentials & accounts</h3>
             <ul>
-              <li>GitHub admin, Actions/Pages, deployment secrets; DNS/TLS, static hosting, server SSH, Caddy/Nginx.</li>
+              <li>No merchant GitHub required for hosted plans — Open Ops owns repos, CI/CD, hosting, and cloud runtime.</li>
+              <li>Merchant provides DNS delegation/custom-domain records and approval for TLS/app association files.</li>
               <li>Square production app: access token, location ID, catalog, orders, payments, inventory, KDS.</li>
-              <li>BTCPay Server: URL, store ID, API key, webhook secret, Lightning liquidity, Bitcoin Rewards plugin.</li>
+              <li>BTCPay Server choice: Open Ops hosted store/node or merchant-owned URL, store ID, API key, webhook secret.</li>
               <li>Breez/Spark API key and LNURL domain if enabled; Nostr keys/relays/NIP-05; OpenClaw bot identity.</li>
-              <li>Apple Developer + App Store Connect API key; Google Play account + signing/upload key; ops API tokens.</li>
+              <li>Apple Developer + App Store Connect API key; Google Play account + signing/upload key if native apps ship under merchant accounts.</li>
             </ul>
           </article>
 
@@ -529,21 +530,20 @@
         </div>
 
         <div class="repo-matrix">
-          <strong>Repos to fork/configure</strong>
-          <span>Open_Ops</span>
-          <span>trailspwa</span>
-          <span>Trails-Coffee</span>
-          <span>Trails-Coffee-Android</span>
-          <span>Coffeeshop-checklist</span>
-          <span>trails-api</span>
-          <span>Squareorder</span>
-          <span>bitcoinrewards</span>
-          <span>trails_landing</span>
-          <span>Anmore / strfry optional</span>
+          <strong>Operator stack — consolidate into one Open Ops platform repo</strong>
+          <span>customer PWA</span>
+          <span>staff ops</span>
+          <span>order API</span>
+          <span>ops API</span>
+          <span>BTCPay rewards</span>
+          <span>Nostr/OpenClaw bridge</span>
+          <span>merchant config</span>
+          <span>iOS template</span>
+          <span>Android template</span>
         </div>
 
         <p class="footnote requirements-footnote">
-          Full implementation worksheet: <code>docs/merchant-onboarding-requirements.md</code>. Never commit live secrets; keep them in GitHub Secrets, server env vars, Apple/Google consoles, Square, BTCPay, or the merchant password manager.
+          Full worksheet: <code>docs/merchant-onboarding-requirements.md</code>. For hosted merchants, GitHub is an Open Ops operator dependency — not a customer prerequisite. Self-hosted merchants can still fork/run the open-source stack.
         </p>
 
         <aside class="speaker-notes">

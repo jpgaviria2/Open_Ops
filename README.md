@@ -23,7 +23,7 @@ A detailed implementation checklist lives at:
 
 `docs/merchant-onboarding-requirements.md`
 
-It covers required accounts, credentials, domains, hosting, Square, BTCPay Server, Breez/Spark, Nostr, OpenClaw, iOS, Android, staff ops, inventory, app store assets, and the applicable GitHub repositories.
+It covers hosted vs self-hosted deployment models, required merchant credentials/assets, domains, Square, BTCPay Server, Breez/Spark, Nostr, OpenClaw, iOS, Android, staff ops, inventory, app store assets, and the operator repository consolidation plan.
 
 ## Presenting
 

@@ -18,10 +18,10 @@ The architecture is open-source-first: Bitcoin and BTCPay Server for sats reward
 
 ## Merchant onboarding / launch packet
 
-The final page of the deck now summarizes what a new merchant must provide before deployment:
+The final page of the deck now summarizes what a hosted merchant must provide before deployment:
 
-- Credentials and accounts: GitHub, DNS/hosting, Square, BTCPay Server, Breez/Spark, Nostr, OpenClaw, Apple Developer, Google Play, API tokens, optional Sheets/Maton/SMTP.
+- Credentials and accounts: DNS approval, Square, BTCPay Server or Open Ops-hosted BTCPay approval, Breez/Spark, Nostr, OpenClaw, Apple Developer, Google Play, API tokens, optional Sheets/Maton/SMTP.
 - Merchant assets: app names, logos, icons, brand colors, photos, app store listings, menu/catalog, staff procedures, inventory, rewards policy.
-- Applicable repositories: Open_Ops, trailspwa, Trails-Coffee, Trails-Coffee-Android, Coffeeshop-checklist, trails-api, Squareorder, bitcoinrewards, trails_landing, optional Anmore/strfry.
+- Operator architecture: the current source repos should consolidate into one Open Ops platform repo/monorepo. GitHub is an Open Ops operator dependency for hosted merchants, not a merchant prerequisite.
 
 Full worksheet: `docs/merchant-onboarding-requirements.md`.

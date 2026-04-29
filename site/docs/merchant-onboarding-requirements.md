@@ -2,50 +2,132 @@
 
 This is the launch packet a new merchant must provide before Open Ops can be rebranded, configured, deployed, and submitted to app stores.
 
-> Security rule: collect the *names* of required credentials in onboarding, but never commit live secrets to Git. Store secrets in GitHub Actions secrets, server environment variables, Apple/Google consoles, BTCPay, Square, or the merchant password manager.
+**Important framing:** for the hosted product, the merchant does **not** need GitHub, CI/CD, servers, or cloud operations. Open Ops operates the platform. The merchant provides business credentials, approval, brand assets, catalog data, staff procedures, and policy decisions.
+
+> Security rule: collect the *names* of required credentials in onboarding, but never commit live secrets to Git. Store secrets in the Open Ops secret manager, cloud secret store, GitHub Actions secrets for operator-owned repos, server environment variables, Apple/Google consoles, BTCPay, Square, or the merchant password manager.
 
 ---
 
-## 1. Applicable GitHub repositories
+## 1. Deployment models
 
-### Core product repositories
+### A. Hosted managed option — recommended default
 
-| Repository | Purpose | Merchant-specific configuration |
-|---|---|---|
-| `jpgaviria2/Open_Ops` | Public pitch deck / sales site for the platform | Public messaging, deck copy, case studies |
-| `jpgaviria2/trailspwa` | Customer Progressive Web App | App name, brand, icons, API origins, Spark/Breez config, Hostinger/GitHub Pages deployment, Nostr shop identity |
-| `jpgaviria2/Trails-Coffee` | Native iOS app | Bundle ID, Team ID, app name, icons, domains, relays, order API, BTCPay/Spark/Nostr config, App Store metadata |
-| `jpgaviria2/Trails-Coffee-Android` | Native Android app | Package/application ID, app name, icons, signing key, Breez API key, domains, relays, Play Store metadata |
-| `jpgaviria2/Coffeeshop-checklist` | Staff checklist / ops PWA | Staff names, manager pubkeys, checklists, procedures, forecast data, Square sync secrets, shop management Nostr key |
-| `jpgaviria2/trails-api` | Staff/ops backend API | DB path, encryption key, admin/checklist/dashboard tokens, Square sync, media storage, Google Sheets/Maton config, CORS domains |
-| `jpgaviria2/Squareorder` | Direct order API + Square payment/KDS + BTCPay sats checkout | Square token/location, BTCPay URL/store/API key, Nostr shop bot key, CORS domains, server deployment |
-| `jpgaviria2/bitcoinrewards` | BTCPay Server Bitcoin Rewards plugin | BTCPay plugin install, store settings, reward %, caps, Square webhook URL/secret, pull payments, email templates |
-| `jpgaviria2/trails_landing` | Main website, menu data, public Nostr/NIP-05 assets | Domain, logos, menu-data, NIP-05 `.well-known`, landing pages, Hostinger deployment, Square menu export |
+Open Ops owns and operates:
 
-### Supporting / optional repositories
+- Source repositories / monorepo
+- CI/CD pipelines
+- Static hosting for customer/staff web apps
+- Cloud runtime for APIs and workers
+- Database, backups, monitoring, logs, and deploys
+- BTCPay/Spark/Nostr/OpenClaw integration glue, unless merchant wants to own those systems
 
-| Repository | Purpose | When needed |
-|---|---|---|
-| `jpgaviria2/Anmore` | Multi-tenant Nostr relay/community infrastructure | If merchant needs a hosted/private relay layer |
-| `jpgaviria2/strfry` | Nostr relay implementation | If self-hosting relay infrastructure |
-| `jpgaviria2/btcpay-nostr-bridge` | Bridge between BTCPay payments and Nostr publishing | If payment events should publish to Nostr feeds |
-| `jpgaviria2/square-ecash-rewards` | Experimental Square + Cashu rewards stack | If testing Cashu/ecash loyalty variants |
-| `jpgaviria2/BTCPayServerPlugins` / `BTCPayServerPlugins.RockstarDev` | Plugin references/build tooling | If extending BTCPay plugins |
+Merchant provides:
+
+- Domain/DNS approval or delegated subdomains
+- Square credentials and catalog access
+- BTCPay/Spark/Nostr credentials or approval to use Open Ops-managed infrastructure
+- App store accounts if native apps ship under the merchant’s own developer accounts
+- Brand assets, menu, staff procedures, inventory/rewards policies
+
+### B. Dedicated cloud option
+
+Open Ops runs the same stack in a merchant-owned cloud account or dedicated tenant.
+
+Merchant additionally provides:
+
+- Cloud account/project access, billing owner, region choice
+- DNS zone access
+- Secret manager access
+- Backup/storage destination
+- Compliance/security requirements
+
+### C. Self-hosted / open-source option
+
+The merchant or their technical team runs the stack themselves.
+
+Merchant additionally needs:
+
+- GitHub org/repo admin access
+- CI/CD configuration
+- Hosting/VPS/Kubernetes/server management
+- Secret management
+- Monitoring, backups, logging, deploys, and incident response
 
 ---
 
-## 2. Merchant accounts and credentials
+## 2. Repository strategy
+
+### Recommended product architecture: one consolidated Open Ops platform repo
+
+Yes — the current Trails ecosystem should be consolidated for a hosted product. The clean model is a single operator-owned monorepo with merchant configuration separated from source code.
+
+Suggested structure:
+
+| Package | Purpose |
+|---|---|
+| `apps/customer-pwa` | Branded customer PWA: ordering, wallet, rewards, chat, social |
+| `apps/staff-ops` | Staff checklists, procedures, inventory, dashboard |
+| `services/order-api` | Square ordering, payment links, BTCPay sats checkout, KDS routing |
+| `services/ops-api` | Staff submissions, inventory, media, identity, reporting |
+| `services/nostr-bridge` | Nostr relays, shop bot DMs, NIP-05 publishing, OpenClaw bridge |
+| `plugins/btcpay-rewards` | BTCPay Bitcoin Rewards plugin or deployment bundle |
+| `templates/ios` | Native iOS template, branded per merchant when needed |
+| `templates/android` | Native Android template, branded per merchant when needed |
+| `packages/shared` | Shared merchant config schemas, UI tokens, API clients, validation |
+| `deploy/` | Docker Compose, Terraform, Caddy, GitHub Actions, cloud deployment scripts |
+| `merchant-configs/{merchant}` | Non-secret merchant config: brand, domains, feature flags, copy, catalog mapping |
+
+Secrets should live outside the repo in a secret manager. Merchant-specific config should be data-driven so adding a merchant does not require forking every app.
+
+### Current source repositories to consolidate
+
+These are operator/source repos, not merchant requirements for the hosted product.
+
+| Current repository | Role in consolidated platform |
+|---|---|
+| `jpgaviria2/Open_Ops` | Pitch deck, public docs, sales material |
+| `jpgaviria2/trailspwa` | Customer PWA source |
+| `jpgaviria2/Trails-Coffee` | Native iOS app source/template |
+| `jpgaviria2/Trails-Coffee-Android` | Native Android app source/template |
+| `jpgaviria2/Coffeeshop-checklist` | Staff checklist and procedures app |
+| `jpgaviria2/trails-api` | Staff/ops backend API |
+| `jpgaviria2/Squareorder` | Direct order API and Square/BTCPay checkout service |
+| `jpgaviria2/bitcoinrewards` | BTCPay Server Bitcoin Rewards plugin |
+| `jpgaviria2/trails_landing` | Main website, public menu/NIP-05 assets, landing content |
+| `jpgaviria2/Anmore` / `jpgaviria2/strfry` | Optional Nostr relay infrastructure |
+| `jpgaviria2/btcpay-nostr-bridge` | Optional BTCPay → Nostr event bridge |
+
+---
+
+## 3. Merchant accounts and credentials
 
 ### GitHub / deployment
 
-Required:
+**Hosted managed option:** GitHub is not required from the merchant. It is an Open Ops operator dependency.
+
+Open Ops owns:
+
+- Repository access
+- GitHub Actions or equivalent CI/CD
+- Deployment environments
+- Internal build secrets
+- Cloud runtime and release pipeline
+
+Merchant only provides GitHub access if:
+
+- They choose self-hosting
+- They want source-code escrow/mirror access
+- They want a dedicated repo under their own organization
+- Their compliance policy requires it
+
+Self-hosted merchants need:
 
 - GitHub organization or repo owner account
 - Repo admin access for Actions, Pages, environments, and secrets
-- GitHub Actions secrets/variables for each deployment target
+- CI/CD secrets/variables for each deployment target
 - Optional GitHub Pages custom domain settings
 
-Common GitHub secrets / vars:
+Operator/internal GitHub secrets and vars may include:
 
 - `HOSTINGER_HOST`
 - `HOSTINGER_USERNAME`
@@ -357,7 +439,7 @@ Required if sending emails:
 
 ---
 
-## 3. Merchant assets to provide
+## 4. Merchant assets to provide
 
 ### Brand assets
 
@@ -465,7 +547,7 @@ Required if sending emails:
 
 ---
 
-## 4. Merchant-specific code/config that must be parameterized
+## 5. Merchant-specific code/config that must be parameterized
 
 Current Trails-specific values that must be changed per merchant:
 
@@ -478,7 +560,7 @@ Current Trails-specific values that must be changed per merchant:
 - Square location ID and access token
 - BTCPay URL/store/API key
 - Breez Spark API key and LNURL domain
-- Hostinger paths/SSH credentials
+- Hosting/deployment credentials — Open Ops/operator-owned for hosted plans; merchant-owned for self-hosted plans
 - Staff checklist names, task labels, role names, and procedure content
 - Inventory items, forecast rules, alert thresholds
 - App icons, PWA manifest, screenshots, theme colors
@@ -486,13 +568,13 @@ Current Trails-specific values that must be changed per merchant:
 
 ---
 
-## 5. Recommended onboarding sequence
+## 6. Recommended onboarding sequence
 
 1. **Merchant discovery**
    - Confirm business model, locations, POS, staff workflows, ordering goals, rewards goals, and Bitcoin comfort level.
 
 2. **Accounts and domains**
-   - Secure GitHub, domain/DNS, hosting/server, Square, BTCPay, Apple, Google Play, and OpenClaw access.
+   - For hosted plans: collect domain/DNS approval plus Square, BTCPay/Spark/Nostr, Apple/Google, and OpenClaw approvals/credentials as needed. GitHub/cloud/server access stays with Open Ops unless the merchant chooses self-hosting.
 
 3. **Brand and assets**
    - Collect logo, colors, app icons, photos, app descriptions, screenshots plan, privacy/support URLs.
@@ -513,20 +595,19 @@ Current Trails-specific values that must be changed per merchant:
    - Import checklists, procedures, roles, staff list, inventory/par levels, discrepancy flow, reporting dashboards.
 
 9. **Security pass**
-   - Verify no live secrets are committed; rotate any exposed credentials; lock GitHub secrets/environments; confirm backup and access control.
+   - Verify no live secrets are committed; rotate any exposed credentials; lock operator secrets/environments; confirm tenant isolation, backup, and access control.
 
 10. **Launch verification**
     - Run PWA build/tests/smokes, API health checks, Square sandbox/live test order, BTCPay invoice/reward test, Nostr DM test, checklist submission test, app builds, TestFlight/internal Play testing.
 
 ---
 
-## 6. Minimal pilot checklist
+## 7. Minimal pilot checklist
 
 A merchant can pilot Open Ops with a smaller package:
 
-- Domain + DNS access
-- GitHub repo access
-- Static hosting credentials
+- Domain + DNS approval/delegation
+- Open Ops hosted tenant configuration
 - Square access token + location ID
 - Menu/catalog + pickup rules
 - PWA brand assets/icons
