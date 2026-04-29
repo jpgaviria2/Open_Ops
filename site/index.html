@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Open Ops pitch deck: an open-source merchant operating system born from the Trails Coffee ecosystem."
+    />
+    <title>Open Ops — The Open-Source Merchant OS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar" aria-label="Presentation controls">
+      <a class="brand" href="#1" aria-label="Open Ops pitch deck home">
+        <span class="brand-mark">OO</span>
+        <span>
+          <strong>Open Ops</strong>
+          <small>Merchant OS pitch deck</small>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <span id="slide-count" class="slide-count">1 / 18</span>
+        <button id="notes-toggle" class="ghost-button" type="button" aria-pressed="false">
+          Notes
+        </button>
+        <button id="print-button" class="ghost-button" type="button">PDF</button>
+      </div>
+    </header>
+
+    <main id="deck" class="deck" aria-live="polite">
+      <section class="slide title-slide" data-title="Title">
+        <div class="slide-grid hero-grid">
+          <div>
+            <p class="eyebrow">Born inside a real cafe. Built for every independent merchant.</p>
+            <h1>Open Ops</h1>
+            <p class="hero-subtitle">The open-source Swiss Army knife for small merchants.</p>
+            <p class="lead">
+              A customer app, staff operating system, Bitcoin rewards wallet, Nostr community layer,
+              and OpenClaw AI assistant — packaged into one merchant-owned platform.
+            </p>
+            <div class="hero-actions" aria-label="Pitch deck themes">
+              <span>Mobile ordering</span>
+              <span>Sats rewards</span>
+              <span>Staff ops</span>
+              <span>AI chat</span>
+            </div>
+          </div>
+          <div class="device-cluster" aria-label="Product mockup">
+            <div class="phone phone-left">
+              <div class="phone-header"></div>
+              <div class="app-card green">Order ahead</div>
+              <div class="app-card cream">Wallet: 12,450 sats</div>
+              <div class="app-card outline">Chat with the shop</div>
+            </div>
+            <div class="dashboard-card">
+              <div class="dashboard-topline">
+                <span>Owner briefing</span>
+                <strong>Today</strong>
+              </div>
+              <div class="metric-row"><span>Sales</span><b>+18%</b></div>
+              <div class="metric-row"><span>Checklist</span><b>94%</b></div>
+              <div class="metric-row"><span>Low stock</span><b>3 items</b></div>
+              <div class="sparkline"></div>
+            </div>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          Open with the transformation: Trails Coffee is not just a cafe app; it is the reference implementation for a broader merchant operating system.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Problem">
+        <p class="eyebrow">The merchant reality</p>
+        <h2>Small merchants are running modern businesses on a pile of disconnected tools.</h2>
+        <div class="split">
+          <div>
+            <p class="lead">
+              Independent operators need the same digital leverage as big chains, but their tools rarely talk to each other.
+            </p>
+            <ul class="pain-list">
+              <li>POS data lives in one dashboard.</li>
+              <li>Ordering and loyalty live somewhere else.</li>
+              <li>Staff checklists are paper, spreadsheets, or Notion pages.</li>
+              <li>Inventory, waste, and discrepancies are reported manually.</li>
+              <li>Customer communication is scattered across social, SMS, DMs, and email.</li>
+              <li>AI tools exist, but they do not understand the actual business.</li>
+            </ul>
+          </div>
+          <div class="messy-stack" aria-label="Disconnected software stack">
+            <span>POS</span><span>Ordering</span><span>Loyalty</span><span>Inventory</span>
+            <span>Staff checklists</span><span>Procedures</span><span>Reports</span><span>Chat</span>
+            <span>Social</span><span>Payments</span><span>Training</span><span>AI</span>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          The pain is not lack of software. It is too much isolated software, which creates owner fatigue and operational blind spots.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Opportunity">
+        <p class="eyebrow">The opening</p>
+        <h2>The next merchant platform will be integrated, open, and AI-native.</h2>
+        <div class="three-column">
+          <article class="card">
+            <span class="icon">🧭</span>
+            <h3>One operating layer</h3>
+            <p>Connect customer ordering, rewards, staff execution, inventory, reporting, and owner updates.</p>
+          </article>
+          <article class="card">
+            <span class="icon">🔓</span>
+            <h3>Merchant-owned rails</h3>
+            <p>Open-source code, portable identity, open protocols, and less dependence on closed marketplaces.</p>
+          </article>
+          <article class="card">
+            <span class="icon">☕️</span>
+            <h3>Built from real operations</h3>
+            <p>Trails Coffee gives the platform a live testbed with daily customer, staff, and owner workflows.</p>
+          </article>
+        </div>
+        <p class="statement">
+          Big chains have integrated infrastructure. Open Ops brings that leverage to independent merchants.
+        </p>
+        <aside class="speaker-notes">
+          Position this as a category: not another app, not another POS, but a merchant-owned operating system.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Solution">
+        <p class="eyebrow">The product</p>
+        <h2>Open Ops turns the Trails Coffee ecosystem into a reusable merchant OS.</h2>
+        <div class="layered-system" aria-label="Open Ops product layers">
+          <div class="layer layer-customer">
+            <strong>Customer layer</strong>
+            <span>iOS • Android • PWA • ordering • wallet • rewards • chat • community</span>
+          </div>
+          <div class="layer layer-ops">
+            <strong>Operations layer</strong>
+            <span>staff checklists • procedures • inventory • discrepancies • prep • waste • reports</span>
+          </div>
+          <div class="layer layer-intel">
+            <strong>Intelligence layer</strong>
+            <span>OpenClaw chat • owner briefings • alerts • workflow automation • business memory</span>
+          </div>
+          <div class="layer layer-open">
+            <strong>Open rails</strong>
+            <span>Bitcoin • BTCPay Server • Nostr • Square integration • GitHub/open-source workflows</span>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          The key is modularity. A merchant can start with ordering, staff ops, rewards, or the full platform.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Proof">
+        <p class="eyebrow">Live proof point</p>
+        <h2>Trails Coffee is already the reference implementation.</h2>
+        <div class="proof-grid">
+          <article>
+            <h3>Native apps</h3>
+            <p>iOS and Android customer apps with ordering, social, wallet, and chat surfaces.</p>
+          </article>
+          <article>
+            <h3>Progressive Web App</h3>
+            <p>Live PWA for browser-based ordering, wallet, rewards, chat, and Nostr identity.</p>
+          </article>
+          <article>
+            <h3>Staff ops site</h3>
+            <p>Checklist, procedures, prep, inventory, waste, and discrepancy reporting for daily operations.</p>
+          </article>
+          <article>
+            <h3>BTCPay rewards stack</h3>
+            <p>Self-hosted Bitcoin rewards infrastructure for sats-based loyalty and payment flows.</p>
+          </article>
+          <article>
+            <h3>Square data bridge</h3>
+            <p>Catalog, orders, forecasting, and KDS-compatible operational flows.</p>
+          </article>
+          <article>
+            <h3>OpenClaw assistant</h3>
+            <p>AI chat layer that can become the control surface for customers, staff, and owners.</p>
+          </article>
+        </div>
+        <aside class="speaker-notes">
+          Emphasize credibility: this deck is based on a working ecosystem, not a theoretical whitepaper.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Customer App">
+        <p class="eyebrow">Customer experience</p>
+        <h2>A branded customer relationship channel the merchant owns.</h2>
+        <div class="feature-showcase">
+          <div class="feature-phone">
+            <div class="phone-header"></div>
+            <h3>Trails Coffee</h3>
+            <div class="tab-row"><span>Home</span><span>Order</span><span>Wallet</span></div>
+            <div class="app-card green">Latte • Muffin • Pickup</div>
+            <div class="app-card cream">Earn sats on every visit</div>
+            <div class="app-card outline">Encrypted shop chat</div>
+          </div>
+          <div>
+            <div class="two-column-list">
+              <ul>
+                <li>Home, Order, Social, Wallet, Chat</li>
+                <li>Menu browsing and cart checkout</li>
+                <li>Offline-friendly menu caching</li>
+                <li>Social feed for shop updates</li>
+                <li>Events, fundraisers, and marketplace-style posts</li>
+              </ul>
+              <ul>
+                <li>Bitcoin rewards wallet</li>
+                <li>Lightning address and QR flows</li>
+                <li>Nostr identity and profile publishing</li>
+                <li>Encrypted Nostr DMs with the shop</li>
+                <li>Bitcoin education built into the customer journey</li>
+              </ul>
+            </div>
+            <p class="statement small">
+              Instead of renting attention from delivery apps and social platforms, merchants build a direct customer channel.
+            </p>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          This is where Open Ops becomes tangible: a customer app that goes beyond ordering into loyalty, identity, community, and education.
+        </aside>
+      </section>
+
+      <section class="slide btcpay-slide" data-title="BTCPay Stack">
+        <p class="eyebrow">Sats rewards infrastructure</p>
+        <h2>BTCPay Server gives merchants a self-hosted rewards and payment backbone.</h2>
+        <div class="architecture-row">
+          <div class="node big">Customer app<br /><small>iOS • Android • PWA</small></div>
+          <div class="arrow">→</div>
+          <div class="node accent">BTCPay Server<br /><small>merchant-controlled</small></div>
+          <div class="arrow">→</div>
+          <div class="node">Lightning<br /><small>sats rewards + invoices</small></div>
+          <div class="arrow">→</div>
+          <div class="node">Square / KDS<br /><small>paid order routing</small></div>
+        </div>
+        <div class="three-column compact">
+          <article class="card">
+            <h3>Rewards API</h3>
+            <p>BTCPay-backed Bitcoin rewards plugin powers wallet balance, history, claims, redemptions, and merchant-defined sats loyalty.</p>
+          </article>
+          <article class="card">
+            <h3>Checkout rails</h3>
+            <p>Lightning invoices can settle customer orders while the operational order still lands in Square/KDS as paid.</p>
+          </article>
+          <article class="card">
+            <h3>Merchant control</h3>
+            <p>The merchant owns the server, store, Lightning node, reward policy, and settlement path — no closed points database required.</p>
+          </article>
+        </div>
+        <p class="footnote">
+          Trails reference stack: BTCPay Server at <code>btcpay.anmore.me</code>, Bitcoin Rewards API, Lightning invoice flows, CAD↔sats conversion, and Square external-payment compatibility for kitchen routing.
+        </p>
+        <aside class="speaker-notes">
+          Explain this as practical Bitcoin: rewards that are real value, invoices that can settle orders, and a merchant-controlled system rather than a speculative crypto feature.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Nostr Layer">
+        <p class="eyebrow">Identity and communication</p>
+        <h2>Nostr turns the merchant relationship into a portable network, not a trapped account.</h2>
+        <div class="split reverse">
+          <div class="identity-card">
+            <span class="avatar">npub</span>
+            <h3>coffeelover@trailscoffee.com</h3>
+            <p>Portable identity, social updates, encrypted shop chat, and merchant-owned community graph.</p>
+          </div>
+          <div>
+            <ul class="check-list">
+              <li>NIP-04 encrypted customer/shop DMs</li>
+              <li>Merchant updates without algorithmic gatekeepers</li>
+              <li>Customer identity that can move across apps</li>
+              <li>Events, fundraisers, marketplace posts, and community content</li>
+              <li>Foundation for zaps, rewards, reputation, and direct relationships</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          Keep this business-first: Nostr is valuable because it gives merchants and customers portable identity and direct communication.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="OpenClaw AI">
+        <p class="eyebrow">AI control surface</p>
+        <h2>OpenClaw chat becomes the command center for owners, staff, and customers.</h2>
+        <div class="chat-layout">
+          <div class="chat-window" aria-label="OpenClaw chat examples">
+            <div class="bubble user">How were sales today?</div>
+            <div class="bubble ai">Sales are up 18%. Muffins sold out early. Prep 20% more for tomorrow.</div>
+            <div class="bubble user">Any staff issues?</div>
+            <div class="bubble ai">Closing checklist missed freezer temp photo twice this week. I drafted a reminder.</div>
+            <div class="bubble user">What should we order?</div>
+            <div class="bubble ai">Low: oat milk, cups, chocolate powder. Suggested order is ready.</div>
+          </div>
+          <div class="ai-capabilities">
+            <article><strong>Customers</strong><span>Menu help, rewards education, order support, events.</span></article>
+            <article><strong>Staff</strong><span>Procedure answers, checklist guidance, issue escalation.</span></article>
+            <article><strong>Owners</strong><span>Daily briefings, alerts, reports, drafting, and decisions.</span></article>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          The important distinction: OpenClaw is not a generic chatbot. It has business context from the merchant's real workflows.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Staff Ops">
+        <p class="eyebrow">Back of house</p>
+        <h2>Every checklist becomes operational intelligence.</h2>
+        <div class="ops-flow">
+          <div class="ops-step"><span>1</span><strong>Staff submits</strong><small>Opening, closing, inventory, waste, discrepancy reports</small></div>
+          <div class="ops-step"><span>2</span><strong>System structures</strong><small>Turns routine work into searchable operating data</small></div>
+          <div class="ops-step"><span>3</span><strong>Owner acts</strong><small>Alerts, reorder suggestions, procedure updates, coaching</small></div>
+        </div>
+        <div class="two-column-list lower">
+          <ul>
+            <li>Opening and closing checklists</li>
+            <li>Role-based procedures</li>
+            <li>Training resources</li>
+            <li>Prep lists and supply calculators</li>
+          </ul>
+          <ul>
+            <li>Inventory reporting</li>
+            <li>Waste tracking</li>
+            <li>Variance and discrepancy tracking</li>
+            <li>Weekly reports and reorder alerts</li>
+          </ul>
+        </div>
+        <aside class="speaker-notes">
+          The staff product is a wedge. It solves immediate pain and creates the data foundation for AI-powered owner intelligence.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Owner Intelligence">
+        <p class="eyebrow">Owner leverage</p>
+        <h2>Financial and operational updates without dashboard fatigue.</h2>
+        <div class="briefing-card">
+          <div class="briefing-header">
+            <span>Morning briefing</span>
+            <strong>Thursday forecast</strong>
+          </div>
+          <div class="briefing-grid">
+            <article><small>Sales</small><b>$1,842</b><em>+12% vs last week</em></article>
+            <article><small>Prep</small><b>High</b><em>Rain clears by lunch</em></article>
+            <article><small>Inventory</small><b>3 lows</b><em>Oat milk, lids, chai</em></article>
+            <article><small>Staff</small><b>2 notes</b><em>Closing variance flagged</em></article>
+          </div>
+        </div>
+        <div class="pill-row">
+          <span>Daily sales</span><span>Product performance</span><span>Low-stock warnings</span><span>Checklist completion</span><span>Waste trends</span><span>Reorder suggestions</span><span>Financial snapshots</span><span>“What changed?” summaries</span>
+        </div>
+        <aside class="speaker-notes">
+          Owners do not want to inspect ten dashboards. They want the system to tell them what changed and what needs action.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Architecture">
+        <p class="eyebrow">Open-source architecture</p>
+        <h2>Composable rails instead of another closed SaaS silo.</h2>
+        <div class="stack-diagram" aria-label="Open Ops technical stack">
+          <div class="stack-row"><span>Experience</span><b>iOS SwiftUI</b><b>Android Compose</b><b>PWA</b><b>Staff web app</b></div>
+          <div class="stack-row"><span>Workflow</span><b>OpenClaw chat</b><b>Owner briefings</b><b>Procedures</b><b>Reporting</b></div>
+          <div class="stack-row"><span>Commerce</span><b>Square POS</b><b>Mobile ordering</b><b>KDS routing</b><b>Forecasting</b></div>
+          <div class="stack-row"><span>Open rails</span><b>BTCPay Server</b><b>Lightning</b><b>Nostr</b><b>GitHub</b></div>
+          <div class="stack-row"><span>Principles</span><b>Open source</b><b>Merchant-owned data</b><b>Portable identity</b><b>Modular hosting</b></div>
+        </div>
+        <aside class="speaker-notes">
+          This is a defensible architecture story: modular, auditable, protocol-based, and practical for small merchants.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Packages">
+        <p class="eyebrow">Packaging</p>
+        <h2>Sell it in modules, then expand into the full operating system.</h2>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <span class="tier">Starter</span>
+            <h3>Customer Channel</h3>
+            <p>Branded PWA, menu, mobile ordering, basic rewards, customer chat, simple analytics.</p>
+          </article>
+          <article class="price-card highlighted">
+            <span class="tier">Growth</span>
+            <h3>Operations</h3>
+            <p>Staff checklists, procedures, inventory, discrepancies, waste, prep forecasting, reports.</p>
+          </article>
+          <article class="price-card">
+            <span class="tier">Platform</span>
+            <h3>Merchant OS</h3>
+            <p>Native apps, BTCPay sats rewards, Nostr identity, OpenClaw assistant, POS integrations, custom automations.</p>
+          </article>
+        </div>
+        <aside class="speaker-notes">
+          The product can be sold incrementally. Do not force every merchant into Bitcoin or native apps on day one.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Target Market">
+        <p class="eyebrow">Beachhead market</p>
+        <h2>Independent merchants with repeat customers and operational complexity.</h2>
+        <div class="merchant-grid">
+          <span>Cafes</span><span>Coffee roasters</span><span>Bakeries</span><span>Food trucks</span><span>Small restaurants</span><span>Breweries</span><span>Boutique retail</span><span>Gyms & studios</span><span>Farmers markets</span>
+        </div>
+        <div class="fit-card">
+          <h3>Best-fit early customer</h3>
+          <p>
+            Uses Square or similar POS, has repeat customers, needs better staff execution and inventory visibility,
+            wants direct ordering, and is open to differentiated loyalty through Bitcoin or community ownership.
+          </p>
+        </div>
+        <aside class="speaker-notes">
+          Keep the first ICP tight: businesses where repeat visits, daily procedures, and owner fatigue are obvious.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Business Model">
+        <p class="eyebrow">Revenue model</p>
+        <h2>Open-source core. Paid hosted, branded, managed, and intelligence layers.</h2>
+        <div class="revenue-wheel">
+          <div><strong>Subscription</strong><span>Per location / modules</span></div>
+          <div><strong>Setup</strong><span>Menu, brand, POS, training</span></div>
+          <div><strong>Premium</strong><span>Native apps, AI, forecasts</span></div>
+          <div><strong>Services</strong><span>Automation, migration, support</span></div>
+          <div><strong>Bitcoin onboarding</strong><span>BTCPay, rewards, education</span></div>
+        </div>
+        <p class="statement small">
+          The trust engine is open-source. The business is making it easy, reliable, branded, and supported for busy merchants.
+        </p>
+        <aside class="speaker-notes">
+          This mirrors successful open-source commercial models: transparency plus paid convenience and expertise.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Roadmap">
+        <p class="eyebrow">Execution path</p>
+        <h2>From Trails Coffee proof-of-concept to reusable merchant platform.</h2>
+        <div class="timeline">
+          <article><span>01</span><h3>Consolidate</h3><p>Polish Trails demo, screenshots, admin flows, and architecture docs.</p></article>
+          <article><span>02</span><h3>Template</h3><p>Merchant config layer, branded PWA generator, checklist templates, POS adapters.</p></article>
+          <article><span>03</span><h3>Pilot</h3><p>Launch 3–5 local merchants with setup + monthly managed service.</p></article>
+          <article><span>04</span><h3>Platform</h3><p>Plugin ecosystem, multi-location support, marketplace, and deeper AI automations.</p></article>
+        </div>
+        <aside class="speaker-notes">
+          The next milestone is not massive scale. It is making the Trails implementation repeatable for a handful of merchants.
+        </aside>
+      </section>
+
+      <section class="slide" data-title="Moat">
+        <p class="eyebrow">Why this can win</p>
+        <h2>The moat is not one feature. It is the connected operating graph.</h2>
+        <div class="moat-grid">
+          <article><h3>Real-world loop</h3><p>Built inside a working cafe, with immediate feedback from operations.</p></article>
+          <article><h3>Open protocol edge</h3><p>Bitcoin and Nostr create portable value, identity, and communication.</p></article>
+          <article><h3>AI with context</h3><p>The assistant understands orders, staff reports, procedures, inventory, and financial snapshots.</p></article>
+          <article><h3>Merchant trust</h3><p>Open-source architecture makes the platform auditable, adaptable, and less extractive.</p></article>
+        </div>
+        <p class="statement">
+          Open Ops is what happens when POS data, customer loyalty, staff execution, and AI finally live in the same operating layer.
+        </p>
+        <aside class="speaker-notes">
+          This is where the deck should feel ambitious: the system improves as it connects more workflows.
+        </aside>
+      </section>
+
+      <section class="slide final-slide" data-title="Ask">
+        <p class="eyebrow">The ask</p>
+        <h2>Turn the Trails Coffee ecosystem into the open merchant OS.</h2>
+        <div class="ask-grid">
+          <article>
+            <h3>Build</h3>
+            <p>Package the reusable merchant configuration layer, dashboards, and onboarding flows.</p>
+          </article>
+          <article>
+            <h3>Pilot</h3>
+            <p>Recruit 3–5 local merchants and validate setup, pricing, retention, and operational lift.</p>
+          </article>
+          <article>
+            <h3>Partner</h3>
+            <p>Bring in open-source, Bitcoin, Nostr, and local commerce collaborators.</p>
+          </article>
+        </div>
+        <p class="closing-line">
+          Small merchants deserve tools that are as connected, intelligent, and independent as they are.
+        </p>
+        <aside class="speaker-notes">
+          Close with independence and practicality. The mission is not just software; it is leverage for local businesses.
+        </aside>
+      </section>
+    </main>
+
+    <footer class="bottombar">
+      <div class="progress" aria-hidden="true"><span id="progress-fill"></span></div>
+      <div class="keyboard-hint">← / → to navigate · N for notes · P for PDF</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
