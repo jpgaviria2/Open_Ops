@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Start an Open Ops merchant onboarding intake for a hosted small-merchant operating system."
+    />
+    <title>Get Started — Open Ops</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="intake-page">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar intake-topbar">
+      <a class="brand" href="index.html#1" aria-label="Back to Open Ops deck">
+        <span class="brand-mark">OO</span>
+        <span>
+          <strong>Open Ops</strong>
+          <small>Hosted merchant onboarding</small>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <a class="ghost-button" href="index.html#19">Deck</a>
+        <a class="ghost-button" href="docs/merchant-onboarding-requirements.md">Worksheet</a>
+      </div>
+    </header>
+
+    <main class="intake-shell">
+      <section class="intake-hero">
+        <p class="eyebrow">Get started</p>
+        <h1>Merchant launch intake</h1>
+        <p class="lead">
+          Tell us enough to scope your hosted Open Ops rollout: customer app, mobile ordering,
+          sats rewards, staff ops, inventory, reporting, and OpenClaw assistant.
+        </p>
+        <div class="intake-promise">
+          <span>No GitHub required for hosted merchants</span>
+          <span>Bring Square + brand assets</span>
+          <span>Native apps optional</span>
+        </div>
+      </section>
+
+      <section class="intake-grid">
+        <form id="merchant-intake-form" class="intake-form" novalidate>
+          <fieldset>
+            <legend>1. Business basics</legend>
+            <div class="form-row two">
+              <label>
+                Business name
+                <input name="businessName" autocomplete="organization" required placeholder="Example: Cedar & Steam Coffee" />
+              </label>
+              <label>
+                Contact name
+                <input name="contactName" autocomplete="name" required placeholder="Owner / operator" />
+              </label>
+            </div>
+            <div class="form-row two">
+              <label>
+                Email
+                <input name="email" type="email" autocomplete="email" required placeholder="owner@example.com" />
+              </label>
+              <label>
+                Website / Instagram
+                <input name="website" autocomplete="url" placeholder="https://… or @handle" />
+              </label>
+            </div>
+            <div class="form-row three">
+              <label>
+                Business type
+                <select name="businessType" required>
+                  <option value="">Choose one</option>
+                  <option>Cafe / coffee shop</option>
+                  <option>Bakery</option>
+                  <option>Food truck</option>
+                  <option>Restaurant</option>
+                  <option>Brewery / taproom</option>
+                  <option>Retail</option>
+                  <option>Gym / studio</option>
+                  <option>Other local merchant</option>
+                </select>
+              </label>
+              <label>
+                Locations
+                <input name="locations" inputmode="numeric" placeholder="1" />
+              </label>
+              <label>
+                POS today
+                <select name="posSystem">
+                  <option>Square</option>
+                  <option>Toast</option>
+                  <option>Lightspeed</option>
+                  <option>Clover</option>
+                  <option>Shopify POS</option>
+                  <option>Other / not sure</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. What do you want Open Ops to handle?</legend>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="modules" value="Branded customer PWA" /> Branded customer PWA</label>
+              <label><input type="checkbox" name="modules" value="Native iOS app" /> Native iOS app</label>
+              <label><input type="checkbox" name="modules" value="Native Android app" /> Native Android app</label>
+              <label><input type="checkbox" name="modules" value="Mobile ordering" /> Mobile ordering</label>
+              <label><input type="checkbox" name="modules" value="BTCPay sats rewards" /> BTCPay sats rewards</label>
+              <label><input type="checkbox" name="modules" value="Spark wallet / Lightning addresses" /> Spark wallet / Lightning addresses</label>
+              <label><input type="checkbox" name="modules" value="Nostr identity + shop chat" /> Nostr identity + shop chat</label>
+              <label><input type="checkbox" name="modules" value="OpenClaw AI assistant" /> OpenClaw AI assistant</label>
+              <label><input type="checkbox" name="modules" value="Staff checklists" /> Staff checklists</label>
+              <label><input type="checkbox" name="modules" value="Inventory reporting" /> Inventory reporting</label>
+              <label><input type="checkbox" name="modules" value="Discrepancy tracking" /> Discrepancy tracking</label>
+              <label><input type="checkbox" name="modules" value="Financial / owner briefings" /> Financial / owner briefings</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="custom-question">
+            <legend>3. The custom onboarding question</legend>
+            <label>
+              If Open Ops could remove one recurring weekly headache from your business in the next 30 days, what would it be — and what would “fixed” look like?
+              <textarea
+                name="weeklyHeadache"
+                rows="5"
+                required
+                placeholder="Example: We keep running out of oat milk by Sunday. Fixed means staff can see the forecast, count inventory, and get an automatic reorder warning before the weekend."
+              ></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Credentials and readiness</legend>
+            <div class="form-row three">
+              <label>
+                Square readiness
+                <select name="squareReadiness">
+                  <option>We use Square and can provide API access</option>
+                  <option>We use Square but need help creating API credentials</option>
+                  <option>We do not use Square</option>
+                  <option>Not sure</option>
+                </select>
+              </label>
+              <label>
+                Bitcoin / rewards readiness
+                <select name="bitcoinReadiness">
+                  <option>We want Open Ops-hosted sats rewards</option>
+                  <option>We have our own BTCPay Server</option>
+                  <option>We want to learn before enabling rewards</option>
+                  <option>No Bitcoin rewards for launch</option>
+                </select>
+              </label>
+              <label>
+                Timeline
+                <select name="timeline">
+                  <option>ASAP pilot</option>
+                  <option>Next 30 days</option>
+                  <option>1–3 months</option>
+                  <option>Researching only</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Domains you want to use
+              <input name="domains" placeholder="example.com, app.example.com, pay.example.com" />
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>5. Assets and screenshots</legend>
+            <div class="form-row two">
+              <label>
+                Brand assets status
+                <select name="brandAssets">
+                  <option>Logo, colors, photos ready</option>
+                  <option>Logo ready, photos needed</option>
+                  <option>Need help packaging assets</option>
+                  <option>Starting from scratch</option>
+                </select>
+              </label>
+              <label>
+                App screenshots / demo visuals
+                <select name="screenshotsStatus">
+                  <option>I can provide screenshots now</option>
+                  <option>I can provide screenshots later</option>
+                  <option>Use Trails Coffee screenshots for demo</option>
+                  <option>Need Open Ops to create mockups</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Screenshot links or notes
+              <textarea name="screenshotNotes" rows="3" placeholder="Paste Drive/Dropbox links, list the app screens you can provide, or note what screenshots Open Ops should mock up."></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>6. Anything else?</legend>
+            <label>
+              Notes, constraints, or must-have launch features
+              <textarea name="notes" rows="4" placeholder="Current tools, staff size, launch event, compliance needs, must-have integrations, etc."></textarea>
+            </label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="primary-button" type="submit">Generate intake packet</button>
+            <button class="ghost-button" type="reset">Reset</button>
+          </div>
+        </form>
+
+        <aside class="intake-sidecar">
+          <div class="sidecar-card">
+            <h2>What happens next?</h2>
+            <ol>
+              <li>Generate the intake packet.</li>
+              <li>Copy it or download the JSON.</li>
+              <li>Send screenshots separately if they are files.</li>
+              <li>Open Ops scopes hosted setup, native apps, rewards, and staff ops.</li>
+            </ol>
+          </div>
+
+          <div class="screenshot-card">
+            <h2>Screenshot set you can provide</h2>
+            <div class="screenshot-slots" aria-label="Suggested screenshot checklist">
+              <span>Home</span>
+              <span>Order</span>
+              <span>Cart</span>
+              <span>Wallet</span>
+              <span>Rewards</span>
+              <span>Chat</span>
+              <span>Staff checklist</span>
+              <span>Owner briefing</span>
+            </div>
+            <p>
+              For now this form accepts screenshot links/notes. If you send actual image files, we can add them to the deck or website gallery.
+            </p>
+          </div>
+
+          <div id="intake-output" class="output-card" hidden>
+            <h2>Generated intake packet</h2>
+            <textarea id="intake-summary" readonly rows="14"></textarea>
+            <div class="output-actions">
+              <button id="copy-intake" class="primary-button" type="button">Copy packet</button>
+              <button id="download-intake" class="ghost-button" type="button">Download JSON</button>
+              <a id="email-intake" class="ghost-button" href="#">Open email draft</a>
+            </div>
+            <p id="copy-status" class="copy-status" aria-live="polite"></p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="intake.js"></script>
+  </body>
+</html>

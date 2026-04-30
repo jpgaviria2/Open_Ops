@@ -25,3 +25,13 @@ The final page of the deck now summarizes what a hosted merchant must provide be
 - Operator architecture: the current source repos should consolidate into one Open Ops platform repo/monorepo. GitHub is an Open Ops operator dependency for hosted merchants, not a merchant prerequisite.
 
 Full worksheet: `docs/merchant-onboarding-requirements.md`.
+
+## Get Started form
+
+Added a hosted merchant intake form at `get-started.html`.
+
+It asks for business basics, desired Open Ops modules, readiness for Square/BTCPay/Spark/Nostr/OpenClaw, domains, brand assets, screenshot status, and the custom onboarding question:
+
+> If Open Ops could remove one recurring weekly headache from your business in the next 30 days, what would it be — and what would “fixed” look like?
+
+The static form generates an intake packet with copy, JSON download, and email-draft handoff. Screenshot files can be provided separately and later added to the deck/site.

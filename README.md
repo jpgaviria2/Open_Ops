@@ -36,6 +36,18 @@ Keyboard controls:
 - `N`: toggle speaker notes
 - `P`: print/export to PDF
 
+## Get Started form
+
+The hosted merchant intake form lives at:
+
+`site/get-started.html`
+
+Live after deployment:
+
+`https://jpgaviria2.github.io/Open_Ops/get-started.html`
+
+Because GitHub Pages is static, the form generates an intake packet client-side with copy, JSON download, and email-draft handoff. Add a real submission endpoint later if/when Open Ops has an intake API, Formspree/Tally endpoint, or CRM integration.
+
 ## Deployment
 
 This repository includes a GitHub Pages workflow at `.github/workflows/pages.yml`.
