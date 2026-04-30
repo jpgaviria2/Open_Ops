@@ -35,3 +35,12 @@ It asks for business basics, desired Open Ops modules, readiness for Square/BTCP
 > If Open Ops could remove one recurring weekly headache from your business in the next 30 days, what would it be — and what would “fixed” look like?
 
 The static form generates an intake packet with copy, JSON download, and email-draft handoff. Screenshot files can be provided separately and later added to the deck/site.
+
+## Product screenshot gallery
+
+Added JP-provided Trails Coffee screenshots under `site/assets/screenshots/` and used them in:
+
+- A new deck slide: **Live product proof**
+- The Get Started page product gallery
+
+Screens represented: home/rewards, menu ordering, cart with sats discount, card checkout, sats checkout, social feed/zaps, events calendar, fundraiser list, fundraiser QR, and sats donation modal.

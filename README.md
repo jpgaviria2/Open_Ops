@@ -53,3 +53,11 @@ Because GitHub Pages is static, the form generates an intake packet client-side 
 This repository includes a GitHub Pages workflow at `.github/workflows/pages.yml`.
 
 On every push to `main`, the static deck in `site/` is uploaded and deployed to GitHub Pages.
+
+## Product screenshots
+
+JP-provided Trails Coffee app screenshots are stored in:
+
+`site/assets/screenshots/`
+
+They power the **Live product proof** deck slide and the product gallery on `get-started.html`.
