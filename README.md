@@ -61,3 +61,5 @@ JP-provided Trails Coffee app screenshots are stored in:
 `site/assets/screenshots/`
 
 They power the **Live product proof** deck slide and the product gallery on `get-started.html`.
+
+Second screenshot batch added: marketplace, wallet receive, wallet settings/identity, wallet backup, and chat/order-help screens. The deck now includes two live product proof slides and the Get Started gallery includes all 15 screenshots.

@@ -44,3 +44,9 @@ Added JP-provided Trails Coffee screenshots under `site/assets/screenshots/` and
 - The Get Started page product gallery
 
 Screens represented: home/rewards, menu ordering, cart with sats discount, card checkout, sats checkout, social feed/zaps, events calendar, fundraiser list, fundraiser QR, and sats donation modal.
+
+## Additional screenshot batch
+
+Added a second JP-provided screenshot batch covering marketplace services, wallet receive QR/recent activity, wallet settings with Spark/Nostr identity, seed/iCloud backup, and shop chat/order assistance.
+
+The deck now has a second live screenshot slide: **More live surfaces**, and the Get Started gallery includes all 15 screenshots.

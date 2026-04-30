@@ -1796,3 +1796,7 @@ body.requirements-active .progress span {
     max-height: none;
   }
 }
+
+.live-screens-slide h2 {
+  letter-spacing: -0.045em;
+}
