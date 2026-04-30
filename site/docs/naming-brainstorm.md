@@ -21,11 +21,16 @@ Why it works:
 - **MerchantMind** — very clear, broad, and AI-native; more generic than CounterMind.
 - **ShopMind** — simple and intuitive; likely harder to own as a name.
 - **CounterPilot** — friendly AI copilot feel, but implies assistance more than native automation.
+- **OpenPilot** — strong open-source + AI pilot signal, but high collision risk with the existing comma.ai/openpilot autonomous-driving project. Better as inspiration than the lead brand unless legal/domain checks clear it.
 - **AgentTill** — strong AI/POS signal; a little too technical.
 - **MainstreetMind** — strong local-business mission; longer and needs trademark/domain checks.
 - **StoreMind** — simple, but generic.
 - **CounterBrain** — memorable but less polished.
 - **NativeOps** — directly says AI-native ops, but less merchant-specific.
+
+## Notes on OpenPilot
+
+OpenPilot is directionally good because it implies an open, AI-native control layer. The problem is name collision: `openpilot` is already strongly associated with comma.ai and autonomous driving. That may create search, trademark, app-store, and customer-confusion risk. Safer variants that preserve the idea: **MerchantPilot**, **ShopPilot**, **CounterPilot**, **PilotOS for Merchants**, or **OpenPilot Commerce**.
 
 ## Why not CounterStack as the main brand
 
