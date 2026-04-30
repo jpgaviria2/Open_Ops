@@ -21,12 +21,17 @@ Why it works:
 - **MerchantMind** — very clear, broad, and AI-native; more generic than CounterMind.
 - **ShopMind** — simple and intuitive; likely harder to own as a name.
 - **CounterPilot** — friendly AI copilot feel, but implies assistance more than native automation.
+- **OpsPilot** — excellent semantic fit for an AI-native ops platform, but high conflict: existing `opspilot.com`, `getopspilot.com`, OpsPilot AI products, open-source OpsPilot projects, and trademark filings make it risky as the lead brand.
 - **OpenPilot** — strong open-source + AI pilot signal, but high collision risk with the existing comma.ai/openpilot autonomous-driving project. Better as inspiration than the lead brand unless legal/domain checks clear it.
 - **AgentTill** — strong AI/POS signal; a little too technical.
 - **MainstreetMind** — strong local-business mission; longer and needs trademark/domain checks.
 - **StoreMind** — simple, but generic.
 - **CounterBrain** — memorable but less polished.
 - **NativeOps** — directly says AI-native ops, but less merchant-specific.
+
+## Notes on OpsPilot
+
+OpsPilot is probably the strongest *plain-English* name: short, obvious, and AI-native. The problem is availability. Web search shows multiple existing OpsPilot/ops-pilot AI operations products and trademark references, so it may be difficult to own in search, app stores, and legal positioning. If we like this lane, safer variants are **MerchantPilot**, **CounterPilot**, **ShopPilot**, **PilotOps**, **TillPilot**, or **MainstreetPilot**.
 
 ## Notes on OpenPilot
 
