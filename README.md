@@ -1,6 +1,6 @@
-# Open Ops — Merchant OS Pitch Deck
+# CounterStack — Merchant OS Pitch Deck
 
-**Open Ops** is a world-class pitch deck for turning the Trails Coffee ecosystem into an open-source merchant operating system for independent businesses.
+**CounterStack** is the customer-facing hosted merchant operating system concept born from the Trails Coffee ecosystem. `Open_Ops` remains the repository/internal codename.
 
 Live deck target: `https://jpgaviria2.github.io/Open_Ops/`
 
@@ -46,7 +46,7 @@ Live after deployment:
 
 `https://jpgaviria2.github.io/Open_Ops/get-started.html`
 
-Because GitHub Pages is static, the form generates an intake packet client-side with copy, JSON download, and email-draft handoff. Add a real submission endpoint later if/when Open Ops has an intake API, Formspree/Tally endpoint, or CRM integration.
+The form currently generates an intake packet client-side with copy, JSON download, and email-draft handoff. This keeps the public demo lightweight while the hosted CounterStack intake backend can be wired behind the same form when ready.
 
 ## Deployment
 
