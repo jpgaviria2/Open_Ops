@@ -19,6 +19,7 @@ Why it works:
 ## Other AI-native candidates
 
 - **Merchie** — catchy, friendly, Shopify-like, and merchant-native. Strongest vibe so far, but high conflict risk because `merchie.co` and Merchie apps already exist in ecommerce/merchandising.
+- **merchOS / MerchOS** — immediately communicates “merchant operating system,” but high conflict and more category/descriptive than ownable brand; existing merchOS/MerchOS usage appears in merchandise operations and custom merch platforms.
 - **MerchantMind** — very clear, broad, and AI-native; more generic than CounterMind.
 - **ShopMind** — simple and intuitive; likely harder to own as a name.
 - **CounterPilot** — friendly AI copilot feel, but implies assistance more than native automation.
@@ -29,6 +30,10 @@ Why it works:
 - **StoreMind** — simple, but generic.
 - **CounterBrain** — memorable but less polished.
 - **NativeOps** — directly says AI-native ops, but less merchant-specific.
+
+## Notes on merchOS
+
+merchOS is extremely clear: it says merchant/merchandising operating system in one word. That makes it useful as category language — “an AI-native merch OS” — but weaker as the lead brand because it is descriptive, casing-dependent, and already used by merchandise operations/custom merch platforms (`merchos.gemnote.com`, `merchos.com`, and other MerchOS references). Better use: keep “merchant OS” or “merch OS” in the tagline/positioning, while choosing a more ownable brand like Merca, Hansa, Jacq, or another invented name.
 
 ## Notes on Merchie
 
