@@ -2185,3 +2185,8 @@ body.requirements-active .progress span {
     grid-template-columns: 1fr;
   }
 }
+
+.ai-capabilities span {
+  color: #e7dcc4;
+  font-size: 1rem;
+}

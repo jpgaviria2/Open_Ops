@@ -35,7 +35,7 @@ function buildPayload() {
     requested_modules: getCheckedValues('modules'),
     custom_onboarding_question: {
       question:
-        'If CounterStack could remove one recurring weekly headache from your business in the next 30 days, what would it be — and what would fixed look like?',
+        'If CounterMind could remove one recurring weekly headache from your business in the next 30 days, what would it be — and what would fixed look like?',
       answer: getValue('weeklyHeadache'),
     },
     readiness: {
@@ -58,7 +58,7 @@ function formatList(items) {
 }
 
 function buildSummary(payload) {
-  return `CounterStack merchant intake
+  return `CounterMind merchant intake
 
 Business
 - Name: ${payload.business.name || '—'}
@@ -95,7 +95,7 @@ Generated: ${payload.submitted_at}`;
 
 function updateEmailLink(payload, summary) {
   const businessName = payload.business.name || 'New merchant';
-  const subject = encodeURIComponent(`CounterStack intake — ${businessName}`);
+  const subject = encodeURIComponent(`CounterMind intake — ${businessName}`);
   const body = encodeURIComponent(`${summary}\n\nScreenshot files can be attached to this email or sent separately.`);
   emailLink.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 }

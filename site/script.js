@@ -26,7 +26,7 @@ function render() {
   progressFill.style.width = `${(human / slides.length) * 100}%`;
 
   const title = slides[current].dataset.title || `Slide ${human}`;
-  document.title = `${human}. ${title} — CounterStack`;
+  document.title = `${human}. ${title} — CounterMind`;
   document.body.classList.toggle('requirements-active', slides[current].classList.contains('requirements-slide'));
 
   if (window.location.hash !== `#${human}`) {

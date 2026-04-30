@@ -1,10 +1,10 @@
-# CounterStack Merchant Onboarding Requirements
+# CounterMind Merchant Onboarding Requirements
 
-This is the launch packet a new merchant must provide before CounterStack can be rebranded, configured, deployed, and submitted to app stores.
+This is the launch packet a new merchant must provide before CounterMind can be rebranded, configured, deployed, and submitted to app stores.
 
-**Important framing:** for the hosted product, the merchant does **not** need GitHub, CI/CD, servers, or cloud operations. CounterStack operates the platform. The merchant provides business credentials, approval, brand assets, catalog data, staff procedures, and policy decisions.
+**Important framing:** for the hosted product, the merchant does **not** need GitHub, CI/CD, servers, or cloud operations. CounterMind operates the platform. The merchant provides business credentials, approval, brand assets, catalog data, staff procedures, and policy decisions.
 
-> Security rule: collect the *names* of required credentials in onboarding, but never commit live secrets to Git. Store secrets in the CounterStack secret manager, cloud secret store, GitHub Actions secrets for operator-owned repos, server environment variables, Apple/Google consoles, BTCPay, Square, or the merchant password manager.
+> Security rule: collect the *names* of required credentials in onboarding, but never commit live secrets to Git. Store secrets in the CounterMind secret manager, cloud secret store, GitHub Actions secrets for operator-owned repos, server environment variables, Apple/Google consoles, BTCPay, Square, or the merchant password manager.
 
 ---
 
@@ -12,26 +12,26 @@ This is the launch packet a new merchant must provide before CounterStack can be
 
 ### A. Hosted managed option — recommended default
 
-CounterStack owns and operates:
+CounterMind owns and operates:
 
 - Source repositories / monorepo
 - CI/CD pipelines
 - Static hosting for customer/staff web apps
 - Cloud runtime for APIs and workers
 - Database, backups, monitoring, logs, and deploys
-- BTCPay/Spark/Nostr/OpenClaw integration glue, unless merchant wants to own those systems
+- BTCPay/Spark/Nostr/AI agent runtime integration glue, unless merchant wants to own those systems
 
 Merchant provides:
 
 - Domain/DNS approval or delegated subdomains
 - Square credentials and catalog access
-- BTCPay/Spark/Nostr credentials or approval to use CounterStack-managed infrastructure
+- BTCPay/Spark/Nostr credentials or approval to use CounterMind-managed infrastructure
 - App store accounts if native apps ship under the merchant’s own developer accounts
 - Brand assets, menu, staff procedures, inventory/rewards policies
 
 ### B. Dedicated cloud option
 
-CounterStack runs the same stack in a merchant-owned cloud account or dedicated tenant.
+CounterMind runs the same stack in a merchant-owned cloud account or dedicated tenant.
 
 Merchant additionally provides:
 
@@ -57,7 +57,7 @@ Merchant additionally needs:
 
 ## 2. Repository strategy
 
-### Recommended product architecture: one consolidated CounterStack platform repo
+### Recommended product architecture: one consolidated CounterMind platform repo
 
 Yes — the current Trails ecosystem should be consolidated for a hosted product. The clean model is a single operator-owned monorepo with merchant configuration separated from source code.
 
@@ -69,7 +69,7 @@ Suggested structure:
 | `apps/staff-ops` | Staff checklists, procedures, inventory, dashboard |
 | `services/order-api` | Square ordering, payment links, BTCPay sats checkout, KDS routing |
 | `services/ops-api` | Staff submissions, inventory, media, identity, reporting |
-| `services/nostr-bridge` | Nostr relays, shop bot DMs, NIP-05 publishing, OpenClaw bridge |
+| `services/nostr-bridge` | Nostr relays, shop bot DMs, NIP-05 publishing, AI agent runtime bridge |
 | `plugins/btcpay-rewards` | BTCPay Bitcoin Rewards plugin or deployment bundle |
 | `templates/ios` | Native iOS template, branded per merchant when needed |
 | `templates/android` | Native Android template, branded per merchant when needed |
@@ -103,9 +103,9 @@ These are operator/source repos, not merchant requirements for the hosted produc
 
 ### GitHub / deployment
 
-**Hosted managed option:** GitHub is not required from the merchant. It is an CounterStack operator dependency.
+**Hosted managed option:** GitHub is not required from the merchant. It is a CounterMind operator dependency.
 
-CounterStack owns:
+CounterMind owns:
 
 - Repository access
 - GitHub Actions or equivalent CI/CD
@@ -338,11 +338,11 @@ Current stack expects:
 - Verified domains list compiled/configured in apps/PWA
 - Optional cache relay such as `nostr-cache.merchantdomain.com`
 
-### OpenClaw / AI assistant
+### AI agent runtime / assistant
 
 Required:
 
-- Merchant OpenClaw workspace or hosted assistant account
+- Merchant AI agent runtime workspace or hosted assistant account
 - Bot identity and approved contact channels
 - Nostr DM bot key if customers/staff use Nostr chat
 - Procedures/checklists/training docs imported as assistant context
@@ -551,7 +551,7 @@ Required if sending emails:
 
 Current Trails-specific values that must be changed per merchant:
 
-- App names: `Trails Coffee`, `Trails`, `CounterStack` case study copy
+- App names: `Trails Coffee`, `Trails`, `CounterMind` case study copy
 - iOS bundle ID: currently `me.anmore.trails-coffee`
 - Android application ID: currently `me.anmore.trailscoffee`
 - Domains: `trailscoffee.com`, `app.trailscoffee.com`, `api.trailscoffee.com`, `order.trailscoffee.com`, `order2.trailscoffee.com`, `btcpay.anmore.me`, `pay.trailscoffee.com`, `relay.anmore.me`, `nostr-cache.trailscoffee.com`, `media.trailscoffee.com`
@@ -560,7 +560,7 @@ Current Trails-specific values that must be changed per merchant:
 - Square location ID and access token
 - BTCPay URL/store/API key
 - Breez Spark API key and LNURL domain
-- Hosting/deployment credentials — CounterStack/operator-owned for hosted plans; merchant-owned for self-hosted plans
+- Hosting/deployment credentials — CounterMind/operator-owned for hosted plans; merchant-owned for self-hosted plans
 - Staff checklist names, task labels, role names, and procedure content
 - Inventory items, forecast rules, alert thresholds
 - App icons, PWA manifest, screenshots, theme colors
@@ -574,7 +574,7 @@ Current Trails-specific values that must be changed per merchant:
    - Confirm business model, locations, POS, staff workflows, ordering goals, rewards goals, and Bitcoin comfort level.
 
 2. **Accounts and domains**
-   - For hosted plans: collect domain/DNS approval plus Square, BTCPay/Spark/Nostr, Apple/Google, and OpenClaw approvals/credentials as needed. GitHub/cloud/server access stays with CounterStack unless the merchant chooses self-hosting.
+   - For hosted plans: collect domain/DNS approval plus Square, BTCPay/Spark/Nostr, Apple/Google, and AI agent runtime approvals/credentials as needed. GitHub/cloud/server access stays with CounterMind unless the merchant chooses self-hosting.
 
 3. **Brand and assets**
    - Collect logo, colors, app icons, photos, app descriptions, screenshots plan, privacy/support URLs.
@@ -586,7 +586,7 @@ Current Trails-specific values that must be changed per merchant:
    - Install Bitcoin Rewards plugin; configure store, API key, webhooks, reward %, caps, pull payments, Lightning liquidity, and test reward claims.
 
 6. **Identity and chat setup**
-   - Generate merchant Nostr keys; configure relays, NIP-05, shop bot, OpenClaw, approved staff/manager identities.
+   - Generate merchant Nostr keys; configure relays, NIP-05, shop bot, AI agent runtime, approved staff/manager identities.
 
 7. **Customer app setup**
    - Rebrand PWA, iOS, and Android; configure API endpoints, domains, wallet/Spark settings, icons, screenshots, and app store metadata.
@@ -604,10 +604,10 @@ Current Trails-specific values that must be changed per merchant:
 
 ## 7. Minimal pilot checklist
 
-A merchant can start with CounterStack with a smaller package:
+A merchant can start with CounterMind with a smaller package:
 
 - Domain + DNS approval/delegation
-- CounterStack hosted tenant configuration
+- CounterMind hosted tenant configuration
 - Square access token + location ID
 - Menu/catalog + pickup rules
 - PWA brand assets/icons
@@ -620,6 +620,6 @@ Then add advanced modules:
 - BTCPay sats rewards
 - Native iOS/Android apps
 - Nostr identity/chat
-- OpenClaw owner assistant
+- AI-native owner assistant
 - Inventory/discrepancy Google Sheets integration
 - Full app store releases

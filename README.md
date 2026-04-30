@@ -1,6 +1,6 @@
-# CounterStack — Merchant OS Pitch Deck
+# CounterMind — AI-Native Merchant OS
 
-**CounterStack** is the customer-facing hosted merchant operating system concept born from the Trails Coffee ecosystem. `Open_Ops` remains the repository/internal codename.
+**CounterMind** is an AI-native hosted merchant operating system concept born from the Trails Coffee ecosystem. `Open_Ops` remains the repository/internal codename.
 
 Live deck target: `https://jpgaviria2.github.io/Open_Ops/`
 
@@ -11,7 +11,7 @@ Live deck target: `https://jpgaviria2.github.io/Open_Ops/`
 - Mobile ordering, wallet, chat, social, events, and customer loyalty
 - BTCPay Server stack for sats rewards and Lightning checkout
 - Nostr identity, encrypted DMs, and merchant-owned community
-- OpenClaw AI chat as the merchant control surface
+- AI-native core chat as the merchant control surface
 - Staff checklist site, procedures, inventory, waste, and discrepancy tracking
 - Square sales sync, owner briefings, forecasting, and financial/ops updates
 - Packaging, business model, target customers, roadmap, and ask
@@ -23,7 +23,7 @@ A detailed implementation checklist lives at:
 
 `docs/merchant-onboarding-requirements.md`
 
-It covers hosted vs self-hosted deployment models, required merchant credentials/assets, domains, Square, BTCPay Server, Breez/Spark, Nostr, OpenClaw, iOS, Android, staff ops, inventory, app store assets, and the operator repository consolidation plan.
+It covers hosted vs self-hosted deployment models, required merchant credentials/assets, domains, Square, BTCPay Server, Breez/Spark, Nostr, AI agent runtime, iOS, Android, staff ops, inventory, app store assets, and the operator repository consolidation plan.
 
 ## Presenting
 
@@ -46,7 +46,7 @@ Live after deployment:
 
 `https://jpgaviria2.github.io/Open_Ops/get-started.html`
 
-The form currently generates an intake packet client-side with copy, JSON download, and email-draft handoff. This keeps the public demo lightweight while the hosted CounterStack intake backend can be wired behind the same form when ready.
+The form currently generates an intake packet client-side with copy, JSON download, and email-draft handoff. This keeps the public demo lightweight while the hosted CounterMind intake backend can be wired behind the same form when ready.
 
 ## Deployment
 
@@ -74,4 +74,4 @@ Live after deployment:
 
 `https://jpgaviria2.github.io/Open_Ops/architecture.html`
 
-The architecture page frames the hosted platform as **CounterStack** (recommended working name) and maps all layers: customer surfaces, merchant/staff surfaces, AI/workflow, commerce, Bitcoin rewards/wallet, Nostr identity/community, data/operating memory, and hosted cloud infrastructure.
+The architecture page frames the hosted platform as **CounterMind** and maps all layers: customer surfaces, merchant/staff surfaces, AI-native workflow, commerce, Bitcoin rewards/wallet, Nostr identity/community, data/operating memory, and hosted cloud infrastructure.
