@@ -18,6 +18,7 @@ Why it works:
 
 ## Other AI-native candidates
 
+- **Merchie** — catchy, friendly, Shopify-like, and merchant-native. Strongest vibe so far, but high conflict risk because `merchie.co` and Merchie apps already exist in ecommerce/merchandising.
 - **MerchantMind** — very clear, broad, and AI-native; more generic than CounterMind.
 - **ShopMind** — simple and intuitive; likely harder to own as a name.
 - **CounterPilot** — friendly AI copilot feel, but implies assistance more than native automation.
@@ -28,6 +29,10 @@ Why it works:
 - **StoreMind** — simple, but generic.
 - **CounterBrain** — memorable but less polished.
 - **NativeOps** — directly says AI-native ops, but less merchant-specific.
+
+## Notes on Merchie
+
+Merchie has the best “Shopify-style” feel so far: short, friendly, memorable, and obviously tied to merchants/merchandising. It could work especially well if the brand voice is approachable and local-business oriented. The issue is conflict: `merchie.co` already exists for ecommerce merchandising intelligence, and there are Merchie apps in both app stores for merchandisers/store-level brand insights. Treat it as a top creative direction but not a final name until legal/domain/app-store checks clear it. Safer variants: **Merchly**, **Mercha**, **Merca**, **Merchantly**, **Merca AI**, **Merchio**, **MercuryOps**.
 
 ## Notes on OpsPilot
 
