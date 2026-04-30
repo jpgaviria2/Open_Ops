@@ -63,3 +63,15 @@ JP-provided Trails Coffee app screenshots are stored in:
 They power the **Live product proof** deck slide and the product gallery on `get-started.html`.
 
 Second screenshot batch added: marketplace, wallet receive, wallet settings/identity, wallet backup, and chat/order-help screens. The deck now includes two live product proof slides and the Get Started gallery includes all 15 screenshots.
+
+## Architecture and naming
+
+Added a customer-facing architecture map at:
+
+`site/architecture.html`
+
+Live after deployment:
+
+`https://jpgaviria2.github.io/Open_Ops/architecture.html`
+
+The architecture page frames the hosted platform as **CounterStack** (recommended working name) and maps all layers: customer surfaces, merchant/staff surfaces, AI/workflow, commerce, Bitcoin rewards/wallet, Nostr identity/community, data/operating memory, and hosted cloud infrastructure.

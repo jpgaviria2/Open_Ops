@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CounterStack architecture: a hosted merchant operating system for customer apps, staff ops, Bitcoin rewards, Nostr identity, and AI assistance."
+    />
+    <title>Architecture — CounterStack / Open Ops</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="architecture-page">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="topbar intake-topbar">
+      <a class="brand" href="index.html#1" aria-label="Back to deck">
+        <span class="brand-mark">CS</span>
+        <span>
+          <strong>CounterStack</strong>
+          <small>Architecture map</small>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <a class="ghost-button" href="index.html#1">Deck</a>
+        <a class="ghost-button get-started-link" href="get-started.html">Get started</a>
+      </div>
+    </header>
+
+    <main class="architecture-shell">
+      <section class="architecture-hero">
+        <p class="eyebrow">Hosted merchant operating system</p>
+        <h1>One connected stack for customers, staff, payments, rewards, and intelligence.</h1>
+        <p class="lead">
+          CounterStack is the proposed customer-facing name for the Open Ops platform: a hosted layer that gives independent merchants the infrastructure of a larger chain without handing their customer relationship to closed marketplaces.
+        </p>
+      </section>
+
+      <section class="architecture-map" aria-label="Comprehensive CounterStack architecture diagram">
+        <div class="map-column outcomes">
+          <h2>Merchant outcomes</h2>
+          <div class="map-card outcome-card"><strong>Direct ordering</strong><span>Own the checkout path, customer identity, and pickup flow.</span></div>
+          <div class="map-card outcome-card"><strong>Real loyalty</strong><span>Sats rewards, wallet flows, zaps, and customer education.</span></div>
+          <div class="map-card outcome-card"><strong>Staff consistency</strong><span>Checklists, procedures, training cards, and escalation loops.</span></div>
+          <div class="map-card outcome-card"><strong>Owner clarity</strong><span>Briefings, alerts, inventory signals, sales trends, and next actions.</span></div>
+        </div>
+
+        <div class="map-column core-stack">
+          <div class="architecture-layer customer-layer">
+            <div class="layer-title"><span>01</span><h2>Customer surfaces</h2></div>
+            <div class="layer-grid">
+              <b>iOS app</b><b>Android app</b><b>Progressive web app</b><b>Website embeds</b><b>QR entry points</b><b>Chat surfaces</b>
+            </div>
+          </div>
+
+          <div class="architecture-layer merchant-layer">
+            <div class="layer-title"><span>02</span><h2>Merchant & staff surfaces</h2></div>
+            <div class="layer-grid">
+              <b>Owner dashboard</b><b>Staff checklist PWA</b><b>Inventory screens</b><b>Procedure library</b><b>Prep lists</b><b>Reports</b>
+            </div>
+          </div>
+
+          <div class="architecture-layer intelligence-layer">
+            <div class="layer-title"><span>03</span><h2>AI + workflow layer</h2></div>
+            <div class="layer-grid">
+              <b>OpenClaw assistant</b><b>Owner briefings</b><b>Staff guidance</b><b>Customer support</b><b>Alerts</b><b>Workflow agents</b>
+            </div>
+          </div>
+
+          <div class="architecture-layer commerce-layer">
+            <div class="layer-title"><span>04</span><h2>Commerce layer</h2></div>
+            <div class="layer-grid">
+              <b>Menu/catalog sync</b><b>Mobile ordering</b><b>Square POS</b><b>KDS routing</b><b>Payment links</b><b>Inventory signals</b>
+            </div>
+          </div>
+
+          <div class="architecture-layer rewards-layer">
+            <div class="layer-title"><span>05</span><h2>Bitcoin rewards + wallet layer</h2></div>
+            <div class="layer-grid">
+              <b>BTCPay Server</b><b>Bitcoin Rewards plugin</b><b>Lightning invoices</b><b>Spark wallet</b><b>LNURL / QR</b><b>Sats policy</b>
+            </div>
+          </div>
+
+          <div class="architecture-layer identity-layer">
+            <div class="layer-title"><span>06</span><h2>Identity + community layer</h2></div>
+            <div class="layer-grid">
+              <b>Nostr profiles</b><b>NIP-05 names</b><b>Encrypted DMs</b><b>Social feed</b><b>Events</b><b>Marketplace</b>
+            </div>
+          </div>
+
+          <div class="architecture-layer data-layer">
+            <div class="layer-title"><span>07</span><h2>Data + operating memory</h2></div>
+            <div class="layer-grid">
+              <b>Tenant config</b><b>Operational DB</b><b>Catalog cache</b><b>Checklist history</b><b>Media storage</b><b>Analytics</b>
+            </div>
+          </div>
+
+          <div class="architecture-layer infra-layer">
+            <div class="layer-title"><span>08</span><h2>Hosted cloud infrastructure</h2></div>
+            <div class="layer-grid">
+              <b>API gateway</b><b>Workers</b><b>Secrets</b><b>Backups</b><b>Monitoring</b><b>Deploy pipeline</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-column integrations">
+          <h2>Connected rails</h2>
+          <div class="map-card"><strong>Square</strong><span>Catalog, orders, payment links, KDS, inventory, location data.</span></div>
+          <div class="map-card"><strong>BTCPay + Lightning</strong><span>Sats rewards, invoices, pull payments, merchant-controlled reward policy.</span></div>
+          <div class="map-card"><strong>Nostr</strong><span>Portable identity, public updates, encrypted DMs, events, marketplace, zaps.</span></div>
+          <div class="map-card"><strong>Breez / Spark</strong><span>Self-custodial wallet flows, Lightning addresses, QR receive, backup.</span></div>
+          <div class="map-card"><strong>OpenClaw</strong><span>AI chat, workflow automation, memory, alerts, and owner-facing actions.</span></div>
+          <div class="map-card"><strong>Cloud tenant</strong><span>Hosted by CounterStack; merchant GitHub and server ops are not required.</span></div>
+        </div>
+      </section>
+
+      <section class="architecture-story">
+        <article>
+          <h2>What customers buy</h2>
+          <p>
+            A branded customer channel, a staff operating layer, a rewards wallet, and an AI-connected owner cockpit — delivered as a hosted service.
+          </p>
+        </article>
+        <article>
+          <h2>What Open Ops operates</h2>
+          <p>
+            Source, deployments, cloud runtime, APIs, databases, monitoring, backups, integrations, and tenant configuration.
+          </p>
+        </article>
+        <article>
+          <h2>What merchants provide</h2>
+          <p>
+            Brand, menu, staff procedures, domain approval, Square access, rewards policy, app-store approvals, and launch goals.
+          </p>
+        </article>
+      </section>
+
+      <section class="naming-lab" aria-labelledby="naming-title">
+        <p class="eyebrow">Naming brainstorm</p>
+        <h2 id="naming-title">Open Ops is the repo. The customer brand should feel more merchant-native.</h2>
+        <div class="name-recommendation">
+          <span>Recommended working name</span>
+          <strong>CounterStack</strong>
+          <p>The operating stack behind the counter: ordering, rewards, staff ops, inventory, and AI.</p>
+        </div>
+        <div class="name-grid">
+          <article><strong>CounterStack</strong><span>Best balance of merchant + platform. Feels concrete, extensible, and technical enough.</span></article>
+          <article><strong>ShopPilot</strong><span>Strong AI/control-surface vibe. Friendly, less open-source/protocol heavy.</span></article>
+          <article><strong>MerchantLoop</strong><span>Great for customer loyalty + ops feedback loops. Softer, more SaaS-like.</span></article>
+          <article><strong>OpenTill</strong><span>Best open-source/Bitcoin/POS signal. Narrower because it sounds payment-first.</span></article>
+          <article><strong>MainstreetOS</strong><span>Clear audience and mission. Needs careful trademark/domain check.</span></article>
+          <article><strong>CounterFlow</strong><span>Good workflow/operations feel. Less broad than CounterStack.</span></article>
+          <article><strong>IndieStack</strong><span>Strong independent merchant energy. More developer-coded.</span></article>
+          <article><strong>StorePilot</strong><span>Simple and customer-friendly. More generic, but easy to understand.</span></article>
+        </div>
+        <p class="naming-note">Next step before committing: domain, trademark, and app-store name checks. Until then, “CounterStack” is the cleanest working brand for customer-facing materials.</p>
+      </section>
+    </main>
+  </body>
+</html>

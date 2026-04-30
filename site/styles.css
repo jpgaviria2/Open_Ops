@@ -1800,3 +1800,343 @@ body.requirements-active .progress span {
 .live-screens-slide h2 {
   letter-spacing: -0.045em;
 }
+
+/* Customer-facing architecture + naming */
+.architecture-linkline {
+  max-width: 880px;
+  margin-top: 22px;
+  color: var(--cream-soft);
+  font-size: 1.08rem;
+}
+
+.architecture-linkline a {
+  color: var(--mint);
+  font-weight: 900;
+}
+
+.naming-layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.78fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.name-hero-card,
+.name-options article {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(246, 239, 221, 0.12), rgba(246, 239, 221, 0.05)),
+    rgba(5, 18, 14, 0.62);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(22px);
+}
+
+.name-hero-card {
+  padding: 34px;
+}
+
+.name-hero-card span {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.name-hero-card strong {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--cream);
+  font-size: clamp(3rem, 6vw, 6.2rem);
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+}
+
+.name-hero-card p {
+  color: var(--cream-soft);
+  font-size: clamp(1.02rem, 1.55vw, 1.3rem);
+  line-height: 1.45;
+}
+
+.name-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.name-options article {
+  padding: 22px;
+}
+
+.name-options b,
+.name-options small {
+  display: block;
+}
+
+.name-options b {
+  margin-bottom: 10px;
+  color: var(--mint);
+  font-size: 1.45rem;
+  letter-spacing: -0.04em;
+}
+
+.name-options small {
+  color: var(--cream-soft);
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
+.architecture-page {
+  overflow: auto;
+}
+
+.architecture-shell {
+  width: min(1500px, calc(100vw - 40px));
+  margin: 0 auto;
+  padding: clamp(72px, 9vh, 118px) 0 80px;
+}
+
+.architecture-hero {
+  max-width: 1180px;
+  margin-bottom: 36px;
+}
+
+.architecture-hero h1 {
+  max-width: 11.5ch;
+  margin-bottom: 22px;
+  font-size: clamp(4rem, 9.4vw, 10.5rem);
+  line-height: 0.82;
+}
+
+.architecture-map {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(620px, 1fr) minmax(260px, 0.48fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.map-column {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.map-column h2 {
+  margin: 0 0 6px;
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.map-card,
+.architecture-layer,
+.architecture-story article,
+.name-recommendation,
+.name-grid article {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(246, 239, 221, 0.07);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(22px);
+}
+
+.map-card {
+  padding: 18px;
+}
+
+.map-card strong,
+.map-card span {
+  display: block;
+}
+
+.map-card strong {
+  margin-bottom: 7px;
+  color: var(--cream);
+  font-size: 1.05rem;
+}
+
+.map-card span {
+  color: var(--cream-soft);
+  font-size: 0.92rem;
+  line-height: 1.38;
+}
+
+.outcome-card {
+  border-color: rgba(145, 230, 173, 0.22);
+}
+
+.architecture-layer {
+  padding: 16px;
+}
+
+.layer-title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.layer-title span {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(247, 200, 95, 0.16);
+  color: var(--gold);
+  font-weight: 950;
+}
+
+.layer-title h2 {
+  margin: 0;
+  color: var(--cream);
+  font-size: clamp(1rem, 1.35vw, 1.32rem);
+  letter-spacing: -0.03em;
+  text-transform: none;
+}
+
+.layer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.layer-grid b {
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 9px;
+  border-radius: 13px;
+  background: rgba(5, 18, 14, 0.45);
+  color: var(--cream-soft);
+  font-size: 0.86rem;
+  text-align: center;
+}
+
+.customer-layer { border-color: rgba(145, 230, 173, 0.32); }
+.merchant-layer { border-color: rgba(247, 200, 95, 0.28); }
+.intelligence-layer { border-color: rgba(240, 139, 79, 0.32); }
+.commerce-layer { border-color: rgba(116, 183, 255, 0.26); }
+.rewards-layer { border-color: rgba(247, 200, 95, 0.42); }
+.identity-layer { border-color: rgba(181, 145, 230, 0.32); }
+.data-layer { border-color: rgba(246, 239, 221, 0.22); }
+.infra-layer { border-color: rgba(145, 230, 173, 0.22); }
+
+.architecture-story {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.architecture-story article {
+  padding: 24px;
+}
+
+.architecture-story h2,
+.naming-lab h2 {
+  margin-bottom: 12px;
+  font-size: clamp(1.55rem, 2.4vw, 2.6rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.architecture-story p,
+.naming-lab p {
+  color: var(--cream-soft);
+  line-height: 1.48;
+}
+
+.naming-lab {
+  margin-top: 30px;
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(246, 239, 221, 0.06);
+}
+
+.name-recommendation {
+  padding: 24px;
+  margin: 18px 0;
+  border-color: rgba(247, 200, 95, 0.36);
+}
+
+.name-recommendation span,
+.name-recommendation strong {
+  display: block;
+}
+
+.name-recommendation span {
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.name-recommendation strong {
+  margin: 8px 0;
+  color: var(--cream);
+  font-size: clamp(3rem, 6vw, 6.2rem);
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+}
+
+.name-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.name-grid article {
+  padding: 18px;
+}
+
+.name-grid strong,
+.name-grid span {
+  display: block;
+}
+
+.name-grid strong {
+  margin-bottom: 8px;
+  color: var(--mint);
+}
+
+.name-grid span {
+  color: var(--cream-soft);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.naming-note {
+  margin: 18px 0 0;
+  color: var(--gold) !important;
+  font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+  .architecture-map,
+  .architecture-story,
+  .name-grid,
+  .naming-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .layer-grid,
+  .name-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.architecture-hero h1 {
+  max-width: 14ch;
+  font-size: clamp(3.2rem, 7.2vw, 8.2rem);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+}
+
+.architecture-hero h1 {
+  letter-spacing: -0.045em;
+}

@@ -23,8 +23,9 @@
         </span>
       </a>
       <div class="topbar-actions">
+        <a class="ghost-button" href="architecture.html">Architecture</a>
         <a class="ghost-button get-started-link" href="get-started.html">Get started</a>
-        <span id="slide-count" class="slide-count">1 / 21</span>
+        <span id="slide-count" class="slide-count">1 / 22</span>
         <button id="notes-toggle" class="ghost-button" type="button" aria-pressed="false">
           Notes
         </button>
@@ -148,7 +149,7 @@
           </div>
           <div class="layer layer-open">
             <strong>Open rails</strong>
-            <span>Bitcoin • BTCPay Server • Nostr • Square integration • GitHub/open-source workflows</span>
+            <span>Bitcoin • BTCPay Server • Nostr • Square integration • hosted open-source core</span>
           </div>
         </div>
         <aside class="speaker-notes">
@@ -438,17 +439,21 @@
       </section>
 
       <section class="slide" data-title="Architecture">
-        <p class="eyebrow">Open-source architecture</p>
-        <h2>Composable rails instead of another closed SaaS silo.</h2>
-        <div class="stack-diagram" aria-label="Open Ops technical stack">
-          <div class="stack-row"><span>Experience</span><b>iOS SwiftUI</b><b>Android Compose</b><b>PWA</b><b>Staff web app</b></div>
-          <div class="stack-row"><span>Workflow</span><b>OpenClaw chat</b><b>Owner briefings</b><b>Procedures</b><b>Reporting</b></div>
-          <div class="stack-row"><span>Commerce</span><b>Square POS</b><b>Mobile ordering</b><b>KDS routing</b><b>Forecasting</b></div>
-          <div class="stack-row"><span>Open rails</span><b>BTCPay Server</b><b>Lightning</b><b>Nostr</b><b>GitHub</b></div>
-          <div class="stack-row"><span>Principles</span><b>Open source</b><b>Merchant-owned data</b><b>Portable identity</b><b>Modular hosting</b></div>
+        <p class="eyebrow">Hosted architecture</p>
+        <h2>One operating layer connects every merchant workflow.</h2>
+        <div class="stack-diagram customer-stack" aria-label="CounterStack merchant architecture summary">
+          <div class="stack-row"><span>Customers</span><b>iOS app</b><b>Android app</b><b>PWA</b><b>Chat / QR entry</b></div>
+          <div class="stack-row"><span>Merchant</span><b>Staff ops</b><b>Owner dashboard</b><b>Procedures</b><b>Inventory reports</b></div>
+          <div class="stack-row"><span>Intelligence</span><b>OpenClaw assistant</b><b>Briefings</b><b>Alerts</b><b>Workflow agents</b></div>
+          <div class="stack-row"><span>Commerce</span><b>Square POS/KDS</b><b>Mobile ordering</b><b>BTCPay rewards</b><b>Lightning/Spark</b></div>
+          <div class="stack-row"><span>Community</span><b>Nostr identity</b><b>Encrypted DMs</b><b>Social/events</b><b>Marketplace</b></div>
+          <div class="stack-row"><span>Platform</span><b>Tenant config</b><b>APIs/workers</b><b>Data + backups</b><b>Monitoring</b></div>
         </div>
+        <p class="architecture-linkline">
+          Full architecture map: <a href="architecture.html">architecture.html</a>
+        </p>
         <aside class="speaker-notes">
-          This is a defensible architecture story: modular, auditable, protocol-based, and practical for small merchants.
+          Sell this as the finished hosted system: Open Ops runs the stack; merchants get one connected layer across customer apps, staff workflows, rewards, commerce, identity, and intelligence.
         </aside>
       </section>
 
@@ -541,6 +546,29 @@
         </p>
         <aside class="speaker-notes">
           This is where the deck should feel ambitious: the system improves as it connects more workflows.
+        </aside>
+      </section>
+
+      <section class="slide naming-slide" data-title="Naming">
+        <p class="eyebrow">Brand direction</p>
+        <h2>“Open Ops” is internal. The customer brand should feel merchant-native.</h2>
+        <div class="naming-layout">
+          <article class="name-hero-card">
+            <span>Recommended working name</span>
+            <strong>CounterStack</strong>
+            <p>The operating stack behind the counter — customer app, staff ops, rewards, inventory, and AI in one hosted platform.</p>
+          </article>
+          <div class="name-options">
+            <article><b>ShopPilot</b><small>Friendly AI/control surface.</small></article>
+            <article><b>MerchantLoop</b><small>Loyalty + operations flywheel.</small></article>
+            <article><b>OpenTill</b><small>Open-source / POS / Bitcoin signal.</small></article>
+            <article><b>MainstreetOS</b><small>Clear audience, needs trademark check.</small></article>
+            <article><b>CounterFlow</b><small>Workflow-heavy, practical.</small></article>
+            <article><b>IndieStack</b><small>Independent merchant energy.</small></article>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          Recommend CounterStack as the working customer-facing brand, while keeping Open Ops as the repo/project codename until domain and trademark checks are done.
         </aside>
       </section>
 

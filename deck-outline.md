@@ -50,3 +50,20 @@ Screens represented: home/rewards, menu ordering, cart with sats discount, card 
 Added a second JP-provided screenshot batch covering marketplace services, wallet receive QR/recent activity, wallet settings with Spark/Nostr identity, seed/iCloud backup, and shop chat/order assistance.
 
 The deck now has a second live screenshot slide: **More live surfaces**, and the Get Started gallery includes all 15 screenshots.
+
+## Architecture + naming update
+
+Added a comprehensive customer-facing architecture page at `architecture.html` and linked it from the deck and intake page.
+
+The architecture is framed as a hosted merchant operating system with these layers:
+
+1. Customer surfaces — iOS, Android, PWA, website embeds, QR entry points, chat
+2. Merchant/staff surfaces — owner dashboard, staff checklist PWA, inventory screens, procedure library, prep lists, reports
+3. AI/workflow layer — OpenClaw assistant, owner briefings, staff guidance, customer support, alerts, workflow agents
+4. Commerce layer — menu/catalog sync, mobile ordering, Square POS, KDS routing, payment links, inventory signals
+5. Bitcoin rewards/wallet layer — BTCPay Server, Bitcoin Rewards plugin, Lightning invoices, Spark wallet, LNURL/QR, sats policy
+6. Identity/community layer — Nostr profiles, NIP-05 names, encrypted DMs, social feed, events, marketplace
+7. Data/operating memory — tenant config, operational DB, catalog cache, checklist history, media storage, analytics
+8. Hosted cloud infrastructure — API gateway, workers, secrets, backups, monitoring, deploy pipeline
+
+Naming brainstorm added. Recommendation: **CounterStack** — “the operating stack behind the counter.” Open Ops remains an internal/repo codename until domain/trademark checks.
